@@ -47,7 +47,7 @@ requirements:
     - openpyxl
     - netcdf4
     - attrs >=21.3.0
-    - click !=8.1.4,!=8.1.5
+    - click >= 8.1.6  # Changed
     - tqdm
     - typing-extensions
     - pympler
