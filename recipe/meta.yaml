@@ -8,7 +8,7 @@ package:
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/pyxel_sim-{{ version }}.tar.gz
   sha256: 3bf44adef02f0369a3f5074bf50bb7e0eae7259fd58e125d6de68d5ec844839c
-  
+
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
@@ -63,7 +63,6 @@ requirements:
     - asdf # Added manually
     - pygmo  >=2.16.1 # Added manually
     - poppy # Added manually
-    
 
 test:
   imports:
