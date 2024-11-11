@@ -1,5 +1,5 @@
 {% set name = "pyxel-sim" %}
-{% set version = "2.6.1" %}
+{% set version = "2.7" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/pyxel_sim-{{ version }}.tar.gz
-  sha256: 8e1880c05371f3ef482671f83a4a8a9eb8c3640d8a78a1014913d98fe8a250fd
+  sha256: 604656fae90355a08e1c10fbfbb651668ad865529d96dab1d6934bfb69e2cbbf
 
 build:
   entry_points:
@@ -30,7 +30,7 @@ requirements:
     - numpy >=1.24
     - pandas >=1.5
     - scipy >=1.10
-    - xarray >=2023.12.0
+    - xarray >=2023.12.0,<2024.10.0
     - xarray-datatree >=0.0.12
     - sep
     - matplotlib-base >=3.6
@@ -48,6 +48,7 @@ requirements:
     - pyyaml
     - xlrd
     - openpyxl
+    - pooch >=1.1.0
     - attrs >=21.3.0
     - click !=8.1.4,!=8.1.5
     - tqdm
