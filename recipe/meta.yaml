@@ -19,13 +19,13 @@ build:
 
 requirements:
   host:
-    - python >=3.9
+    - python >=3.10
     - setuptools >=63
     - versioneer ==0.29
     - wheel
     - pip
   run:
-    - python >=3.9
+    - python >=3.10
     - numba >=0.56.4
     - numpy >=1.24
     - pandas >=1.5
