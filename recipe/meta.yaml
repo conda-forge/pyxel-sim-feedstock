@@ -15,7 +15,7 @@ build:
     - pyxel-sim = pyxel.run:main
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 0
+  number: 1
 
 requirements:
   host:
@@ -41,7 +41,7 @@ requirements:
     - dask-core
     - distributed
     - ipywidgets >=7.5
-    - astropy >=4.3
+    - astropy-base >=4.3
     - fsspec >=2021
     - aiohttp
     - h5netcdf
