@@ -1,5 +1,5 @@
 {% set name = "pyxel-sim" %}
-{% set version = "2.9" %}
+{% set version = "2.10" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/pyxel_sim-{{ version }}.tar.gz
-  sha256: d650457502f390a11153095bcc26fdaea6ccaaabc97feaa9c97fe687bf4598f0
+  sha256: 1e3d446cd5e75c4b8cb968496d4ba07ea7cbb759360dfcb8a30fda3f4c9d29c7
 
 build:
   entry_points:
@@ -20,7 +20,7 @@ build:
 requirements:
   host:
     - python >=3.10
-    - setuptools >=63
+    - setuptools >=77
     - versioneer ==0.29
     - wheel
     - pip
@@ -67,8 +67,12 @@ requirements:
 
 test:
   imports:
+    - build
+    - data
+    - dist
+    - htmlcov
     - pyxel
-    - pyxel.calibration
+    - pyxel-sim
   commands:
     - pip check
     - pyxel --help
