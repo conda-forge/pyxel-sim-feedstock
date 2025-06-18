@@ -54,7 +54,7 @@ requirements:
     - pympler
     - pillow
     - scikit-image >=0.20.0
-    - astroquery <0.4.11
+    - astroquery <=0.4.10
     - specutils >=1.2
     - synphot
     - diskcache
