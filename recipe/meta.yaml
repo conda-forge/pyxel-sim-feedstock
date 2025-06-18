@@ -1,5 +1,5 @@
 {% set name = "pyxel-sim" %}
-{% set version = "2.11" %}
+{% set version = "2.11.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/pyxel_sim-{{ version }}.tar.gz
-  sha256: 787d4f715e38d7d274caf50d5eb6713ff41d66b434b34c98035ee28177e85586
+  sha256: fa52f74f82dc5f05d180cf590e48d5fa3d84a8d2c123974594beabbbcf547e17
 
 build:
   entry_points:
@@ -54,7 +54,7 @@ requirements:
     - pympler
     - pillow
     - scikit-image >=0.20.0
-    - astroquery
+    - astroquery <0.4.11
     - specutils >=1.2
     - synphot
     - diskcache
