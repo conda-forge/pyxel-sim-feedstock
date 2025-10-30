@@ -1,5 +1,5 @@
 {% set name = "pyxel-sim" %}
-{% set version = "2.13" %}
+{% set version = "2.14" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/pyxel_sim-{{ version }}.tar.gz
-  sha256: 6e3964adca529f042627243ddc24a39ae9cab8f3ac555677d892f330e857c8be
+  sha256: f742beeddd36f7cda3ffb6165d105ac662dfd44418b21792105302738b1a8080
 
 build:
   entry_points:
@@ -19,51 +19,33 @@ build:
 
 requirements:
   host:
-    - python >=3.10
+    - python >=3.10,<3.14
     - setuptools >=77
     - versioneer ==0.29
     - wheel
     - pip
   run:
-    - python >=3.10
-    - numba >=0.56.4
-    - numpy >=1.24
-    - pandas >=1.5
-    - scipy >=1.10
+    - python >=3.10,<3.14
+    - numpy >=2
+    - scipy >=1.12
+    - pandas >=2.1,<3
     - xarray >=2024.10.0
-    - matplotlib-base >=3.6
-    - seaborn
-    - hvplot >=0.9
-    - bokeh >=3.3.0
-    - panel
-    - dask-core
-    - distributed
-    - ipywidgets >=7.5
     - astropy >=5.2
-    - fsspec >=2021
-    - aiohttp
-    - h5netcdf
-    - pyyaml
-    - xlrd
-    - openpyxl
-    - pooch >=1.1.0
-    - attrs >=21.3.0
-    - click !=8.1.4,!=8.1.5
-    - tqdm
-    - typing_extensions >=4.9
-    - pympler
-    - pillow
-    - scikit-image >=0.20.0
     - astroquery <0.4.11
     - specutils >=1.2
     - synphot
+    - scikit-image >=0.23.0
+    - numba >=0.56.4
+    - hvplot >=0.9
+    - fsspec >=2021
+    - pympler
+    - pillow
     - diskcache
     - rich
     - asdf # Added manually
     - pygmo  >=2.16.1 # Added manually
     - poppy # Added manually
     - panel # Added manually
-
 
 test:
   imports:
