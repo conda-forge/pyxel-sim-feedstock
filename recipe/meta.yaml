@@ -15,7 +15,7 @@ build:
     - pyxel-sim = pyxel.run:main
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 0
+  number: 1
 
 requirements:
   host:
@@ -46,6 +46,7 @@ requirements:
     - pygmo  >=2.16.1 # Added manually
     - poppy # Added manually
     - panel # Added manually
+    - pooch # Added manually
 
 test:
   imports:
