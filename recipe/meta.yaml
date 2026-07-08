@@ -33,7 +33,7 @@ requirements:
     - astroquery  # [not emscripten]
     - specutils >=1.2  # [not emscripten]
     - synphot  # [not emscripten]
-    - pyckles  # [not emscripten]
+#    - pyckles  # [not emscripten]
     - scikit-image >=0.24.0
     - numba >=0.56.4  # [not emscripten]
     - hvplot >=0.9  # [not emscripten]
