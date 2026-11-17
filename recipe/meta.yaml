@@ -1,30 +1,30 @@
-{% set version = "3.0.2" %}
+{% set version = "3.1" %}
 
 package:
   name: pyxel-sim
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/p/pyxel-sim/pyxel_sim-{{ version }}.tar.gz
-  sha256: 4ba742bfd96414ed6afd1dcd13583dbf4d6497f32e058b96d46887c580b4508d
+  url: https://files.pythonhosted.org/packages/source/p/pyxel-sim/pyxel_sim-{{ version }}.tar.gz
+  sha256: 26743349d2bfe9d6982d3300ff600de48316478c743cee455058c3aae539b3ce
 
 build:
-  skip: true  # [py<310]
+  skip: true  # [py<311]
   entry_points:
     - pyxel = pyxel.run:main
     - pyxel-sim = pyxel.run:main
-  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
+  script: {{ PYTHON }} -m pip install . -vv
   number: 0
 
 requirements:
   host:
-    - python >=3.10
+    - python >=3.11
     - setuptools >=77
     - versioneer ==0.29
     - wheel
     - pip
   run:
-    - python >=3.10
+    - python >=3.11
     - numpy >=2
     - scipy >=1.14
     - pandas >=2.3
