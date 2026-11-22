@@ -14,11 +14,11 @@ build:
     - pyxel = pyxel.run:main
     - pyxel-sim = pyxel.run:main
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 0
+  number: 1
 
 requirements:
   host:
-    - python
+    - python <3.15
     - setuptools >=77
     - versioneer ==0.29
     - wheel
@@ -57,6 +57,7 @@ requirements:
     - poppy # Added manually
     - panel # Added manually
     - dask  # Added manually
+    - pooch # Added manually
 
 test:
   imports:
