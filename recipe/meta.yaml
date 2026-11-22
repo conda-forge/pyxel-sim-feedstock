@@ -18,13 +18,13 @@ build:
 
 requirements:
   host:
-    - python >=3.11
+    - python
     - setuptools >=77
     - versioneer ==0.29
     - wheel
     - pip
   run:
-    - python >=3.11
+    - python
     - numpy >=2
     - scipy >=1.14
     - pandas >=2.3
@@ -32,7 +32,7 @@ requirements:
     - astropy-base >=5.2
     - astroquery
     - specutils >=1.2
-    - synpho
+    - synphot
 #    - pyckles
     - scikit-image >=0.24.0
     - numba >=0.56.4
@@ -53,7 +53,7 @@ requirements:
     - rich
     - annotated-types
     - asdf # Added manually
-    - pygmo  >=2.16.1 # Added manually
+    - pygmo >=2.16.1 # Added manually
     - poppy # Added manually
     - panel # Added manually
     - dask  # Added manually
