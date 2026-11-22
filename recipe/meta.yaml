@@ -1,12 +1,12 @@
-{% set version = "3.1" %}
+{% set version = "3.1.1" %}
 
 package:
   name: pyxel-sim
-  version: "{{ version }}"
+  version: {{ version }}
 
 source:
-  url: https://files.pythonhosted.org/packages/source/p/pyxel-sim/pyxel_sim-{{ version }}.tar.gz
-  sha256: 26743349d2bfe9d6982d3300ff600de48316478c743cee455058c3aae539b3ce
+  url: https://pypi.org/packages/source/p/pyxel-sim/pyxel_sim-{{ version }}.tar.gz
+  sha256: 7068c1188d1fee985f7f38bf9949766943500a10fec241ae8403db399e6ebd9e
 
 build:
   entry_points:
@@ -14,17 +14,17 @@ build:
     - pyxel-sim = pyxel.run:main
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 2
+  number: 0
 
 requirements:
   host:
-    - python
+    - python >=3.11
     - setuptools >=77
     - versioneer ==0.29
     - wheel
     - pip
   run:
-    - python
+    - python >=3.11
     - numpy >=2
     - scipy >=1.14
     - pandas >=2.3
@@ -37,6 +37,7 @@ requirements:
     - scikit-image >=0.24.0
     - numba >=0.56.4
     - hvplot >=0.9
+    - panel-material-ui
     - matplotlib-base
     - seaborn
     - datashader
