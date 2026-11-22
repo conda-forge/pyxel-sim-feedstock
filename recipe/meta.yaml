@@ -9,12 +9,12 @@ source:
   sha256: 26743349d2bfe9d6982d3300ff600de48316478c743cee455058c3aae539b3ce
 
 build:
-  skip: true  # [py<311]
   entry_points:
     - pyxel = pyxel.run:main
     - pyxel-sim = pyxel.run:main
+  noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 1
+  number: 2
 
 requirements:
   host:
@@ -57,6 +57,7 @@ requirements:
     - poppy # Added manually
     - panel # Added manually
     - dask  # Added manually
+    - pooch # Added manually
 
 test:
   imports:
