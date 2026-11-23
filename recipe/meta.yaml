@@ -1,4 +1,4 @@
-{% set version = "3.1" %}
+{% set version = "3.1.1" %}
 
 package:
   name: pyxel-sim
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://files.pythonhosted.org/packages/source/p/pyxel-sim/pyxel_sim-{{ version }}.tar.gz
-  sha256: 26743349d2bfe9d6982d3300ff600de48316478c743cee455058c3aae539b3ce
+  sha256: 7068c1188d1fee985f7f38bf9949766943500a10fec241ae8403db399e6ebd9e
 
 build:
   entry_points:
@@ -14,7 +14,7 @@ build:
     - pyxel-sim = pyxel.run:main
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 2
+  number: 0
 
 requirements:
   host:
